@@ -234,6 +234,17 @@ html, body {
   .coffee img {
     width: 100%;
   }
+
+  #scoll_to_top{
+    position: fixed;
+    width: 25px;
+    bottom: 50px;
+    right: 30px;
+}
+
+#scoll_to_top img{
+    width: 25px;
+}
   
   @media all and (max-width: 860px) {
     
