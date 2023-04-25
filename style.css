@@ -83,12 +83,12 @@ nav li:hover .submenu{
 }
 
 .menu-Serestaurer:hover{
-    border-bottom: 5px dashed blue;
+    border-bottom: 5px solid blue;
     background-color: rgba(000, 112, 192, 0.15);
 }
 
 .menu-venir-ici:hover{
-    border-bottom: 5px dotted yellow;
+    border-bottom: 5px solid yellow;
     background-color: rgba(244, 211, 79, 0.15);
 }
 
