@@ -3,23 +3,13 @@ html{
 }
 
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
+    list-style: none;
     text-decoration: none;
-    list-style-type: none;
 }
 
-/* couleur fond d'écran */
-
-body{
-  height: 100%;
-  /* background-image: linear-gradient(to bottom , #ffd89b, #19547b);
-  background-image: radial-gradient( #ffd89b, #19547b);  */
-  background-image: radial-gradient(circle at 0% 100% , #ffd89b, #19547b);
-}
-
-/* FIN couleur fond d'écran */
-
+/* HEADER NAVBAR */
 nav{
     width: 100%;
     background-color: grey;
@@ -30,7 +20,7 @@ nav > ul{
 }
 
 nav > ul > li{
-    float: left;
+    float: right;
     position: relative;
 }
 
@@ -38,10 +28,6 @@ nav > ul::after{
     content: "";
     display: table;
     clear: both;
-}
-
-.submenu{
-    display: none;
 }
 
 nav input[type=checkbox]{
@@ -62,44 +48,9 @@ nav > ul > li > a{
     color: white;
 }
 
-nav li:hover .submenu{
-    display: inline-block;
-    position: absolute;
-    top: 100%;
-    left: 0px;
-    padding: 0px;
-    z-index: 1000;
-}
-
-.submenu li a{
-    padding: 15px 30px;
-    color: black;
-    width: 270px;
-}
-
-.menu-logement:hover{
+.menuNavbar:hover{
     border-bottom: 5px solid orange;
     background-color: rgba(228, 77, 38, 0.15);
-}
-
-.menu-Serestaurer:hover{
-    border-bottom: 5px solid blue;
-    background-color: rgba(000, 112, 192, 0.15);
-}
-
-.menu-venir-ici:hover{
-    border-bottom: 5px solid yellow;
-    background-color: rgba(244, 211, 79, 0.15);
-}
-
-.menu-contact:hover{
-    border-bottom: 5px solid green;
-    background-color: rgba(220, 220, 220, 0.15);
-}
-
-.submenu li:hover a{
-    color: #424558;
-    font-weight: bold;
 }
 
 nav input[type=checkbox]:checked ~ ul{
@@ -110,7 +61,11 @@ nav input[type=checkbox]:checked ~ ul{
     .menu-mobile{
         display: block;
         color: white;
+        /* color: rgb(165, 70, 70); */
+
         background-color: rgba(29, 197, 151, 0.97);
+        /* background-color: rgba(107, 29, 197, 0.97); */
+
         text-align: center;
         padding: 12px 0;
     }   
@@ -124,115 +79,107 @@ nav input[type=checkbox]:checked ~ ul{
     nav ul li a, nav ul li:hover a{
         padding: 10px 0;
     }
-    nav li:hover .submenu{
-        display: block;
-        position: static;
+}
+/* FIN HEADER NAVBAR */
+
+/* couleur fond d'écran */
+
+body{
+    height: 100%;
+    background-image: linear-gradient(to bottom , #ffd89b, #19547b);
+    background-image: radial-gradient( #ffd89b, #19547b); 
+    background-image: radial-gradient(circle at 0% 100% , #ffd89b, #19547b);
+}
+
+#introPays{
+    position: absolute;
+    z-index: 99;
+    left: 25%;
+    top: 4%;
+    color: orangered;
+
+}
+
+
+@media screen and (max-width: 600px) {
+    #introPays h1{
+        padding: 0 auto;
+        /* text-align: center; */
+
     }
-}
-
-/* Partie Principale */
-h1, h2{
-    text-align: center;
 
 }
 
-
-
-p{
-  text-align: center;
-  margin: 0 20%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px 5%;
-  font-size: 1.2em;
-  border: 2px solid blue;
-  border-radius: 10px;
-  background-color: burlywood;
-}
-
-/* On supprime les marges inutiles */
-html, body {
-    margin : 0; padding: 0;
-    font-family: 'Lato', arial, sans-serif;
-  }
-  
-  header {
-    background-color: #ff896b;
-    padding: 30px;
-    color: white;
-    margin-bottom: 30px;
-  }
-  
-  nav {
-    float: right;
-    padding-top: 10px;
-  }
-  
-  nav li a {
-    color: #ebe6e6;
-    text-decoration: none;
-  }
-  nav li a:hover {
-    color: #f5f5f5;
-  }
-  
-  nav #active a {
-    color: white;
-  }
-  
-  nav ul, #footer-links ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0
-  }
-  
-  nav li, #footer-links li {
-    margin: 0 5px;
-    display: inline-block;
-  }
-  
-  footer {
-    border-top: 1px solid #f0f0f0;
-    padding: 50px 30px;
-    color: #777;
-    font-size: .8em;
-    margin-top: 30px;
-  }
-  
-  footer #footer-links {
-    float: right;
-    text-align: right;
-  }
-  
-  footer #footer-links p {
-    margin-top: 0;
-    padding-right: 5px;
-  }
-  
-  footer #footer-links a {
-    color: silver;
-    text-decoration: none;
-  }
-  footer #footer-links a:hover {
-    color: grey;
-  }
-  
-  h1 {
-    font-family: 'Merriweather', serif;
-    margin-top: 50px;
-  }
-  
-  #top-3 {
-    text-align: center;
-  }
-  
-  .logo {
-    width: 30px;
-    display: inline-block;
-  }
-  
-  .logo img {
+.imagePrincipale{
     width: 100%;
+}
+
+.principale h1, h2{
+    text-align: center;
+    color: rgb(214, 213, 213);
+    /* color: rgb(218, 204, 56); */
+
+    padding: 10px 0;
+} 
+
+#accueil h2{
+    text-align: center;
+    color: rgb(214, 213, 213);
+    padding: 10px 0;
+    font-size: 1.5em;
+}
+
+#accueil p{
+    margin: 0 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 5%;
+    font-size: 1.2em;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: burlywood;
+}
+
+#catégorie h2{
+    text-align: center;
+    color: rgb(214, 213, 213);
+    padding: 10px 0;
+    font-size: 1.5em;
+}
+
+#categorie p{
+    margin: 0 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 5%;
+    font-size: 1.2em;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: burlywood;
+}
+
+#tarifs h2{
+    text-align: center;
+    color: rgb(214, 213, 213);
+    padding: 10px 0;
+    font-size: 1.5em;
+}
+
+#tarifs p{
+    margin: 0 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 5%;
+    font-size: 1.2em;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: burlywood;
+}
+
+/* PARTIE VIGNETTES */
+/* PARTIE VIGNETTES */
+#partieVignettes {
+    text-align: center;
   }
   
   /* On englobe notre site dans un container et on le centre */
@@ -241,7 +188,7 @@ html, body {
     margin: 0 auto;
   }
   
-  .coffee {
+  .vignette {
     width: 190px;
     height: 190px;
     background-color: #e8d4b4;
@@ -249,20 +196,9 @@ html, body {
     display: inline-block;
   }
   
-  .coffee img {
+  .vignette img {
     width: 100%;
   }
-
-  #scoll_to_top{
-    position: fixed;
-    width: 25px;
-    bottom: 50px;
-    right: 30px;
-}
-
-#scoll_to_top img{
-    width: 25px;
-}
   
   @media all and (max-width: 860px) {
     
@@ -279,12 +215,87 @@ html, body {
     }
     
   }
-  
-  @media all and (max-width: 360px) {
-    
-    /* Footer */
-    footer .container { text-align: center; }
-    footer #footer-links { float: none; text-align: center; }
-  }
+  /* FIN PARTIE VIGNETTES */
+/* FIN PARTIE VIGNETTES */
+/* partie "étiquettes" x 3 */
+.prestations{
+    order: 2px solid green;
+    background-color: rgb(25, 0, 255);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 5%;
+}
 
-  /* FIN Partie Principale */
+.imagesPrestation{
+    order: 2px solid green;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+}
+
+.imagesPrestation h4{
+    font-weight: bold;
+    color: darkgrey;
+    order: 2px solid green;
+    background-color: rgb(129, 0, 0);
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+.imagesPrestation p{
+    order: 2px solid green;
+    border-radius: 10px;
+    background-color: rgb(129, 0, 0);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/* FIN partie "étiquettes" x 3 */
+
+#infos h2{
+    text-align: center;
+    color: rgb(214, 213, 213);
+    padding: 10px 0;
+    font-size: 1.5em;
+}
+
+#infos p{
+    margin: 0 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 5%;
+    font-size: 1.2em;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: burlywood;
+}
+
+
+
+/* incon retour haut de page */
+#scroll_to_top{
+    position: fixed;
+    width: 25px;
+    bottom: 90px;
+    right: 30px;
+}
+
+#scroll_to_top img{
+    width: 25px;
+}
+/* FIN incon retour haut de page */
+
+.basDePage{
+    text-align: center;
+    background-color: rgb(252, 111, 111);
+    color: white;
+    padding: 10px 10%;
+}
