@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,8 @@
     <title>Document</title>
 
 <link rel="stylesheet" href="style.css">
+
+<script defer src="index.js"></script>
 
 </head>
 <body>
@@ -16,10 +18,31 @@
             <label for="menu-mobile" class="menu-mobile">Menu</label>
             <input type="checkbox" id="menu-mobile" role="button">
             <ul>
-                <li class="menuNavbar"><a href="#tarifs">Mon parcours</a>
-                <li class="menuNavbar"><a href="#tarifs">Tarifs</a>
-                <li class="menuNavbar"><a href="#categorie">Sites vitrine</a>
-                <li class="menuNavbar"><a href="#accueil">Accueil</a>
+                <li class="menuNavbar"><select onchange="window.location.href=this.value"class="lang">
+                    <option value="index.html">Français</option>
+                    <option value="lang/en/index-en.html">English</option>
+                    <option value="lang/de/index-de.html">Deutsch</option>
+                    </select>
+                </li>
+                <li class="menuNavbar"><a href="#monParcous">Mon parcours</a></li>
+                <li class="menuNavbar"><a href="#tarifs">Tarifs</a></li>
+                <li class="menuNavbar"><a href="#categorie">Sites vitrine</a></li>
+                <li class="menuNavbar"><a href="#accueil">Accueil</a></li>
+             
+
+                    <!--  -->
+                    <!-- <li class="lang">
+                        <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" 
+                                class="lang-selector">
+                          <option value="../en" class="lang-option">
+                            <a hreflang="EN" rel="alternate">English</a>
+                          </option>
+                          <option value="../fr/" class="lang-option" selected>
+                            <a hreflang="FR" rel="alternate">Français</a>
+                          </option>
+                        </select>
+                      </li> -->
+                    <!--  -->
             </ul>
         </nav>
     </header>
@@ -74,7 +97,7 @@
 <h2>Les différentes formules qu'offrent ....</h2>
 <p>Pour se rapprocher au plus près des besoins de chacun, .... vous propose différentes formules.
 A partir d'une base simple et accéssible à toutes les bourses, vous pourrez choisir ce qui vous correspond le mieux et de sélectionner les options les plus appropriées à votre activité. <br> 
-Ainis, vous métrisez votre budget en ayant un outil qui permet une visibilité optimale sur internet. <br><br>
+Ainis, vous métrisez votre budget en ayant un outil qui permet une visibilité optimale sur internet.</p> <br><br>
 
 </section>
 
@@ -90,6 +113,8 @@ Ainis, vous métrisez votre budget en ayant un outil qui permet une visibilité 
         - votre nom <br>
         - adresse e-mail <br>
         de contact <br>
+        - votre siteadapté <br> 
+        à différente d'écran <br>
         - une rubrique <br>
         recrutement</p>
     </div>
@@ -175,19 +200,42 @@ Ainis, vous métrisez votre budget en ayant un outil qui permet une visibilité 
 <!-- FIN PARTIE GOOGLE MAP -->
 
 
-<section id="tarifs">
+<section id="monParcous">
     <h2>Mon parcours</h2>
     <p>Voici quelques lignes à propos de moi: <br><br>
     
-    Natif d'un village de montagne en Haute Savoie en France, j'y ai tout naturellement développé une passion <br> pour le ski alpin grâce à mon père. Ma mère, issue d'une famille de tailleur de pierre et de dessinateur ma transmis le virus du dessin à la grande différence que je le pratique sur ordinateur. <br><br>
+    Natif d'un village de montagne de Haute Savoie en France, j'y ai tout naturellement développé une passion <br> pour le ski alpin grâce à mon père. Ma mère, issue d'une famille de tailleur de pierre et de dessinateur ma transmis le virus du dessin à la grande différence que je le pratique sur ordinateur. <br><br>
     ? J’ai d’abord obtenue un CAP de menuiserie agencement mais avec beaucoup d’expérience en charpente et couverture. <br>
     Puis un titre électricien bâtiment et pour finir un CAP constructeur ossature bois. <br>
     Je suis aujourd’hui en reconvention professionnelle dans le développement web ou mon but et d’aider les petites entreprises à se faire connaître. <br>
     J’ai passé une petite partie de ma vie à l’étranger, notamment dans les pays anglo-saxon. <br>
     Je m’intéresse aussi à l’architecture en général, aux sciences et certaines parties de l’histoires, quelle soit bonne ou mauvaise. ?
     </p>
+    <br><br>
+
+    <div>
+        <span id="text-initial">(à ne pas corriger) D'après la météo, quand il y a des nuages, on ne voit pas le soleil</span>
+        <span id="text-hidden" class="hidden">mais quand il n'y a pas de nuage, on peut voir le soleil. haha!!</span>
+        <span id="show" class="clickable" onclick="javascript:showMoreOrLess()">enlever les nuages</span>
+    </div>
+    
 
 </section>
+
+<section id="categorie">
+    <div>
+        <h2>Recrutement (à traduire) </h2>
+        <p><strong>Poste stagiaires:</strong> <br>
+        ancun poste à pourvoir pour le moment<br><br>
+
+        <strong>Poste salarié:</strong> <br>
+        ancun poste à pourvoir pour le moment<br><br>
+    
+        Vous trouver que les traduction ne sont pas "parfaite"? <br>
+        Vous pouvez améliorer? <a href="mailto:contact.1776.1989@gmail.com">faites m'en part!</a></p>
+</div>
+</section>
+
 
 
 
@@ -207,7 +255,7 @@ Ainis, vous métrisez votre budget en ayant un outil qui permet une visibilité 
             </div>
             <div class="développerPar">
                 <h5>développer par Be Online <br>
-                Contact: .....</h5>
+                <a href="mailto:contact.1776.1989@gmail.com">contact.1776.1989@gmail.com</a></h5>
             </div>
         </footer>
 
